@@ -113,7 +113,7 @@ $$\gamma_0 ^2 = 1, \gamma_k ^2 = -1, \gamma _ \mu \cdot \gamma _ \nu   = 0 , \, 
 			<p> 
 			We get a 16 terms algebra: 
 			<br/>
-			1 scalar, 4 vectors ($\gamma_\mu$), 6 bivectors ($\gamma_\mu \wedge \gamma_\nu$), 4 trivectors ($I \gamma_\mu$), 1 pseudoscalar $I$.
+			1 scalar, 4 vectors ($\gamma_\mu$), 6 bivectors ($\gamma_\mu \wedge \gamma_\nu$), 4 trivectors ($I \gamma_\mu$), 1 pseudoscalar $I \equiv \gamma_0\gamma_1\gamma_2\gamma_3$
 			
 			</p>
 
@@ -127,7 +127,7 @@ $$\gamma_0 ^2 = 1, \gamma_k ^2 = -1, \gamma _ \mu \cdot \gamma _ \nu   = 0 , \, 
 We recover 'normal' observer dependent 3D vector by defining $$\vec e_i = \vec \sigma _ i \equiv \gamma_{i0} = \gamma_i \wedge \gamma _0$$
 
 
-and recover: $$\sigma_1 \times \sigma_2 = -I \sigma_1 \wedge \sigma_2 = \sigma_3$$
+and recover: $$\vec \sigma_1 \times \vec \sigma_2 = -I \vec \sigma_1 \wedge \vec \sigma_2 = \vec \sigma_3$$
 
 
 <figure><img src='images/split.png'><figcaption><small></small></figcaption></figure>
@@ -192,7 +192,23 @@ and recover: $$\sigma_1 \times \sigma_2 = -I \sigma_1 \wedge \sigma_2 = \sigma_3
 		</p>
 	</section>
 
+	<section>
+		<h5>Charge Conservation</h5>
+		\begin{align}
+		\Box ^2 F = \Box j \\
+		= \Box \cdot j + \Box \wedge j 
+		\end{align}
 
+	<p>Separating the scalar part we get:
+	$$\Box \cdot j = 0 = \partial_t \rho + \vec \nabla \cdot \vec j = 0 $$
+	</section>
+
+
+	<section>
+		<h5>Scalar Invariants</h5>
+		<p>We take the scalar and pseudoscalar part of $F^2$:
+		$$F^2=(\vec E+I \vec B)^2= \vec E^2 - \vec B^2 + 2I(\vec E \cdot \vec B)$$
+	</section>
 
 </section> <!-- Maxwell Eq -->
 
@@ -202,9 +218,11 @@ and recover: $$\sigma_1 \times \sigma_2 = -I \sigma_1 \wedge \sigma_2 = \sigma_3
 		<h4> Conclusion </h4>
 		<ul>
 			<li>Usual 3-vectors are 'relative' spacetime bivectors</li>
-			<li>Single Maxwell equation in vacuum $\Box F =0$</li>
+			<li>4D vector represented in 3D by a scalar + a relative vector</li>
+			<li>Maxwell equation in vacuum $\Box F =0$</li>
 			<ul><li>With sources $\Box F = j$</li></ul>
-			<li>$i$ appears naturally as a pseudo-scalar representing an oriented volume element</li>
+			<li>Invariants are part of $F^2$ </li>
+			<li>$i$ is a pseudo-scalar oriented volume element</li>
 		</ul>
 	
 	</section>
@@ -245,6 +263,9 @@ math: {
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+
+Reveal.configure({ slideNumber: true });
+
 		</script>
 
 
