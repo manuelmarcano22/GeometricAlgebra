@@ -69,15 +69,28 @@
 </section>
 
 
-			<section data-markdown>
-	<textarea data-template>
-		## The geometric product
+			<section>
+		<h3>The geometric product</h3>
 
-- $ab = a \cdot b + a \wedge b$
+		<ul>
+			<li>$ab = a \cdot b + a \wedge b$</li>
+		</ul>
 
 <p>the sum of a scalar  and  a  bivector,  and  the  result  is  called  a
 <em>multivector</em></p>
-	</textarea>
+</section>
+
+
+<section>
+	<h4> Geometric Representation</h4>
+
+	<figure>
+		<img height='500'  src="images/gnumbers.png">
+		<figcaption><small>From <em>New Foundations in Mathematics: The Geometric Concept of Number</em></small></figcaption>
+	</figure>
+
+
+
 </section>
 
 </section> <!-- GA intro -->
@@ -86,34 +99,125 @@
 
 <section> <!-- Spacetime algebra -->
 
-			<section data-markdown>
-	<textarea data-template>
-		### Geometric Algebra in 4D 
-		#### Space-time Algebra (STA)
-We define the basis vectors: 
-
-$$\gamma_0^2=1, \gamma_k^2=-1$$
-
-and 
-- $\gamma_\mu \cdot\gamma_\nu =0$
-
--$\gamma_{\mu\nu\sigma}=\gamma_\mu \wedge \gamma_nu \wedge \gamma_\sigma$
+			<section>
+				<h3> Geometric Algebra in 4D </h2>
+				<h5>Space-time Algebra (STA)</h3>
+				<p>
+				We define the basis vectors as: 
 
 
-<p>the sum of a scalar  and  a  bivector,  and  the  result  is  called  a
-<em>multivector</em></p>
-	</textarea>
+$$\gamma_0 ^2 = 1, \gamma_k ^2 = -1, \gamma _ \mu \cdot \gamma _ \nu   = 0 , \, (\mu \neq \nu) $$
+
+				</p>
+
+			<p> 
+			We get a 16 terms algebra: 
+			<br/>
+			1 scalar, 4 vectors ($\gamma_\mu$), 6 bivectors ($\gamma_\mu \wedge \gamma_\nu$), 4 trivectors ($I \gamma_\mu$), 1 pseudoscalar $I$.
+			
+			</p>
+
+
+
 </section>
+
+
+<section>
+	<h5>Space-time split</h5>
+We recover 'normal' observer dependent 3D vector by defining $$\vec e_i = \vec \sigma _ i \equiv \gamma_{i0} = \gamma_i \wedge \gamma _0$$
+
+
+and recover: $$\sigma_1 \times \sigma_2 = -I \sigma_1 \wedge \sigma_2 = \sigma_3$$
+
+
+<figure><img src='images/split.png'><figcaption><small></small></figcaption></figure>
+
+
+</section>
+
+<section>
+	<h5>Space-time split examples</h5>
+	<p>
+
+
+	<ul>
+
+		<li>$x^2 = x \gamma_0 \gamma_0 x = [ct+ \vec x][ct - \vec x] = (ct)^2 - |\vec x|^2$</li>
+		<li>$\Box = \gamma _0 (\partial_0 + \vec \nabla)$</li>
+	</ul>
+	</p>
+</section>
+
 
 
 </section> <!--4D -->
 
 
 
+<section><!-- Maxwerll Eq -->
+
+	<section>
+		<h3>Maxwell Equations</h4>
+		<h6>The Faraday Bivector</h6>
+
+		<p>We define the faraday bivector:
+		\begin{align}
+		F = E_1 \gamma_{10} +   E_2 \gamma_{20} +  E_3 \gamma_{30} + \\
+		B_1 \gamma_{32} + B_2 \gamma_{13} + B_3 \gamma_{21} = \vec E + I \vec B
+		\end{align}
+
+		</p>
+
+	</section>
+
+
+	<section>
+		<h5>Maxwell Equations in free space</h5>
+		<p>$$\Box F =  0 $$
+		<ul><li>Scalar: $\vec \nabla \cdot \vec E = 0$</li></ul>
+		<ul><li>Relative vector: $\partial _t \vec E + I \vec \nabla \wedge \vec B = 0$</li></ul>
+		<ul><li>Relative bivector: $I \partial _t \vec B + \vec \nabla \wedge \vec E = 0$</li></ul>
+		<ul><li>Pseudoscalar: $I \vec \nabla \cdot \vec B = 0$</li></ul>
+		</p>
+	</section>
+
+
+	<section>
+		<h5>Maxwell Equations</h5>
+		<p>$$\Box F =  j$$
+		
+		where $j =(\rho + \vec j) \gamma_0 $
+		<ul><li>Scalar: $\vec \nabla \cdot \vec E = \rho$</li></ul>
+		<ul><li>Relative vector: $\partial _t \vec E + I \vec \nabla \wedge \vec B = -\vec j$</li></ul>
+		</p>
+	</section>
 
 
 
+</section> <!-- Maxwell Eq -->
 
+
+<section> <!--Conclusion -->
+	<section>
+		<h4> Conclusion </h4>
+		<ul>
+			<li>Usual 3-vectors are 'relative' spacetime bivectors</li>
+			<li>Single Maxwell equation in vacuum $\Box F =0$</li>
+			<ul><li>With sources $\Box F = j$</li></ul>
+			<li>$i$ appears naturally as a pseudo-scalar representing an oriented volume element</li>
+		</ul>
+	
+	</section>
+
+	<section>
+ 
+		<blockquote>
+			<small>The  principal  argument  for  the  adoption  of  geometric  algebra  is  that  it  provides  a single, simple mathematical framework which eliminates the need for the plethora of diverse mathematical descriptions and techniques that it would otherwise be necessary to learn. [McRobie, F. A. and J. Lasenby (1999). Simo-Vu Quoc Rods using Clifford Algebra, Int. J. Numer. Meth. Eng. 45, 377–398/]</small>
+
+		</blockquote>
+	</section>
+
+</section> <!-- Consluison -->
 
 
 			</div>
